@@ -30,7 +30,7 @@
     </table>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="modalLabel">
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -40,6 +40,10 @@
             <h4> Nuevo Alumno</h4>
           </div>
           <div class="modal-body">
+            <div class="alert alert-danger" role="alert" id="error">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <p>Error, intente de nuevo introduciendo los datos completos</p>
+            </div>
             <form role="form">
               <div class="form-group">
                 <label for="matricula"> Matricula</label>
@@ -55,17 +59,13 @@
               </div>
               <div class="select">
                 <label for="condicion"> Condicion</label><br />
-                <select name="condicion" id="condicion">
-                  <option value="inscrito"> Inscrito</option>
-                  <option value="reinscrito"> Reinscrito</option>
-                  <option value="noInscrito"> No inscrito</option>
-                </select>
+                <input type="text" class="form-control" id="condicion">
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-success btn-default pull-left" id="guardar" data-dismiss="modal"><span class="glyphicon glyphicon-lock"></span> Guardar</button>
-            <button class="btn btn-danger btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+            <button class="btn btn-success btn-default pull-left" id="guardar"><span class="glyphicon glyphicon-lock"></span> Guardar</button>
+            <button class="btn btn-danger btn-default pull-right" id="cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
           </div>
         </div>
       </div>
