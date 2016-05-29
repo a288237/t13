@@ -1,7 +1,10 @@
-table thead {
+body{
+background: url('../img/bg.jpg') no-repeat center center fixed;
+}
+/*table thead {
   background-color: darkgray;
   color: white;
-}
+}*/
 table tbody tr:nth-child(even) {
   background-color: lightgreen;
 }
@@ -13,7 +16,7 @@ table tbody tr:nth-child(odd) {
   width: 500px;
   border-radius: 5px;
   padding: 30px;
-  background-color: #F9EBEB;
+  background-color: #E8FCFA;
 }
 h1 {
   text-align: center;
